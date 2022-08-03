@@ -3,6 +3,7 @@ package com.winterchen.service.user;
 import com.github.pagehelper.PageInfo;
 import com.winterchen.model.UserDomain;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -13,4 +14,6 @@ public interface UserService {
     int addUser(UserDomain user);
 
     PageInfo<UserDomain> findAllUser(int pageNum, int pageSize);
+
+    void exportExcel(HttpServletResponse response);
 }
